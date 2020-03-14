@@ -1,0 +1,263 @@
+Version: 2
+
+Alternatives: &alternatives
+ iPhone 11 Pro 512GB:
+  wyswietlacz: 5.8
+  pamiec_RAM_i_wbudowana: 4/512GB
+  aparat_foto: 12MPix
+  price: 6949 zl
+ iPhone 11 Pro 256GB:
+  wyswietlacz: 5.8
+  pamiec_RAM_i_wbudowana: 4/256GB
+  aparat_foto: 12MPix
+   16
+  price: 5999 zl
+ iPhone 11 Pro 64GB:
+  wyswietlacz: 5.8
+  pamiec_RAM_i_wbudowana: 4/64GB
+  aparat_foto: 12MPix
+   12
+  price: 5099 zl
+ iPhone 11 64GB:
+  wyswietlacz: 6.1
+  pamiec_RAM_i_wbudowana: 4/64GB
+  aparat_foto: 12MPix
+  price: 3649 zl
+ iPhone 11 256 GB:
+  wyswietlacz: 6.1
+  pamiec_RAM_i_wbudowana: 4/256GB
+  aparat_foto: 12MPix
+  price: 4349 zl
+ iPhone X 64GB:
+  wyswietlacz: 5.8
+  pamiec_RAM_i_wbudowana: 3/64GB
+  aparat_foto: 12 MPix
+  price: 3899 zl
+ iPhone 8 64 GB:
+  wyswietlacz: 4.7
+  pamiec_RAM_i_wbudowana: 2/64GB
+  aparat_foto: 12MPix
+  price: 2349 zl
+ iPhone 8 256 GB:
+  wyswietlacz: 4.7
+  pamiec_RAM_i_wbudowana: 2/256GB
+  aparat_foto: 12MPix
+  price: 2999 zl
+ iPhone 7 32 GB:
+  wyswietlacz: 4.7
+  pamiec_RAM_i_wbudowana: 2/32GB
+  aparat_foto: 12MPix
+  price: 1549 zl
+ iPhone 7 128 GB:
+  wyswietlacz: 4.7
+  pamiec_RAM_i_wbudowana: 2/128GB
+  aparat_foto: 12MPix
+  price: 2369 zl
+Goal:
+ name: Buy iPhone
+ author: Szymon Pęczalski
+ preferences:
+  pairwise:
+  - [efficiency, quality, 1]
+  - [efficiency, style, 5]
+  - [efficiency,   price, 6]
+  - [quality, style, 5]
+  - [quality,   price, 6]
+  - [style,   price, 3]
+ children:
+  efficiency:
+   preferences:
+    pairwise:
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 256GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 256GB,  iPhone 11 64GB, 1]
+     - [ iPhone 11 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone X 64GB,  iPhone 8 256GB, 1/3]
+     - [ iPhone X 64GB,  iPhone 8 64GB, 1/3]
+     - [ iPhone X 64GB,  iPhone 7 128GB, 3]
+     - [ iPhone X 64GB,  iPhone 7 32GB, 3]
+     - [ iPhone 8 256GB,  iPhone 8 64GB, 1]
+     - [ iPhone 8 256GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 256GB,  iPhone 7 32GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 32GB, 3]
+     - [ iPhone 7 128GB,  iPhone 7 32GB, 1]
+   children: *alternatives
+  quality:
+   preferences:
+    pairwise:
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 256GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 256GB,  iPhone 11 64GB, 1]
+     - [ iPhone 11 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone X 64GB,  iPhone 8 256GB, 3]
+     - [ iPhone X 64GB,  iPhone 8 64GB, 3]
+     - [ iPhone X 64GB,  iPhone 7 128GB, 5]
+     - [ iPhone X 64GB,  iPhone 7 32GB, 5]
+     - [ iPhone 8 256GB,  iPhone 8 64GB, 1]
+     - [ iPhone 8 256GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 256GB,  iPhone 7 32GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 32GB, 3]
+     - [ iPhone 7 128GB,  iPhone 7 32GB, 1]
+   children: *alternatives
+  style:
+   preferences:
+    pairwise:
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 256GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 512GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 256GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 64GB, 3]
+     - [ iPhone 11 Pro 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 256GB,  iPhone 11 64GB, 1]
+     - [ iPhone 11 256GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 256GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 256GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 256GB,  iPhone 7 32GB, 9]
+     - [ iPhone 11 64GB,  iPhone X 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 256GB, 5]
+     - [ iPhone 11 64GB,  iPhone 8 64GB, 5]
+     - [ iPhone 11 64GB,  iPhone 7 128GB, 9]
+     - [ iPhone 11 64GB,  iPhone 7 32GB, 9]
+     - [ iPhone X 64GB,  iPhone 8 256GB, 3]
+     - [ iPhone X 64GB,  iPhone 8 64GB, 3]
+     - [ iPhone X 64GB,  iPhone 7 128GB, 5]
+     - [ iPhone X 64GB,  iPhone 7 32GB, 5]
+     - [ iPhone 8 256GB,  iPhone 8 64GB, 1]
+     - [ iPhone 8 256GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 256GB,  iPhone 7 32GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 128GB, 3]
+     - [ iPhone 8 64GB,  iPhone 7 32GB, 3]
+     - [ iPhone 7 128GB,  iPhone 7 32GB, 1]
+   children: *alternatives
+  price:
+   preferences:
+    pairwise:
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 256GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 256GB, 1/3]
+     - [ iPhone 11 Pro 512GB,  iPhone 11 64GB, 1/3]
+     - [ iPhone 11 Pro 512GB,  iPhone X 64GB, 1/5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 256GB, 1/5]
+     - [ iPhone 11 Pro 512GB,  iPhone 8 64GB, 1/5]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 128GB, 1/6]
+     - [ iPhone 11 Pro 512GB,  iPhone 7 32GB, 1/6]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 Pro 64GB, 1]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 256GB, 1/3]
+     - [ iPhone 11 Pro 256GB,  iPhone 11 64GB, 1/3]
+     - [ iPhone 11 Pro 256GB,  iPhone X 64GB, 1/5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 256GB, 1/5]
+     - [ iPhone 11 Pro 256GB,  iPhone 8 64GB, 1/5]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 128GB, 1/9]
+     - [ iPhone 11 Pro 256GB,  iPhone 7 32GB, 1/9]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 256GB, 1/3]
+     - [ iPhone 11 Pro 64GB,  iPhone 11 64GB, 1/3]
+     - [ iPhone 11 Pro 64GB,  iPhone X 64GB, 1/5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 256GB, 1/5]
+     - [ iPhone 11 Pro 64GB,  iPhone 8 64GB, 1/5]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 128GB, 1/9]
+     - [ iPhone 11 Pro 64GB,  iPhone 7 32GB, 1/9]
+     - [ iPhone 11 256GB,  iPhone 11 64GB, 1]
+     - [ iPhone 11 256GB,  iPhone X 64GB, 1/5]
+     - [ iPhone 11 256GB,  iPhone 8 256GB, 1/5]
+     - [ iPhone 11 256GB,  iPhone 8 64GB, 1/5]
+     - [ iPhone 11 256GB,  iPhone 7 128GB, 1/9]
+     - [ iPhone 11 256GB,  iPhone 7 32GB, 1/9]
+     - [ iPhone 11 64GB,  iPhone X 64GB, 1/5]
+     - [ iPhone 11 64GB,  iPhone 8 256GB, 1/5]
+     - [ iPhone 11 64GB,  iPhone 8 64GB, 1/5]
+     - [ iPhone 11 64GB,  iPhone 7 128GB, 1/6]
+     - [ iPhone 11 64GB,  iPhone 7 32GB, 1/6]
+     - [ iPhone X 64GB,  iPhone 8 256GB, 1/3]
+     - [ iPhone X 64GB,  iPhone 8 64GB, 1/3]
+     - [ iPhone X 64GB,  iPhone 7 128GB, 1/5]
+     - [ iPhone X 64GB,  iPhone 7 32GB, 1/5]
+     - [ iPhone 8 256GB,  iPhone 8 64GB, 1]
+     - [ iPhone 8 256GB,  iPhone 7 128GB, 1/3]
+     - [ iPhone 8 256GB,  iPhone 7 32GB, 1/3]
+     - [ iPhone 8 64GB,  iPhone 7 128GB, 1/3]
+     - [ iPhone 8 64GB,  iPhone 7 32GB, 1/3]
+     - [ iPhone 7 128GB,  iPhone 7 32GB, 1/3]
+   children: *alternatives

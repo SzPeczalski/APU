@@ -1,0 +1,11 @@
+install.packages("mlr")
+library("mlr")
+library("MASS")
+library("C50")
+data(Melanoma)
+head(Melanoma)
+Melanoma$thickness <- factor(Melanoma$thickness)
+treeModel <- C5.0(x=Melanoma[,-6], y=Melanoma$thickness)
+treeModel
+summary(treeModel)
+plot(treeModel)
